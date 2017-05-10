@@ -1,0 +1,29 @@
+{
+  "name": "@gardenhq/parse-template-literal",
+  "version": "1.1.0",
+  "description": "Javascript String Literal parsing and rendering utilities",
+  "author": {
+    "name": "GardenHQ",
+    "email": "gardener@gardenhq.io",
+    "url": "https://gardenhq.io/"
+  },
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gardenhq/parse-template-literal.git"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "should": "^11.2.1",
+    "mocha": "^3.3.0",
+    "mocha-multi": "^0.11.0"
+  },
+  "scripts": {
+    "test": "mkdir -p ./test/results && npm run story",
+    "spec": "istanbul cover --config ./test/istanbul.yml ./node_modules/.bin/_mocha -- --recursive -R mocha-multi --reporter-options tap=./test/results/spec/mocha.tap,spec=- \"./test/spec/**/*.js\"",
+    "story": "mocha --recursive -R mocha-multi --reporter-options tap=./test/results/story/mocha.tap,spec=- \"./test/story/**/*.js\""
+  },
+  "main": "index.js",
+  "keywords": [],
+  "publishConfig": {}
+}
